@@ -1,4 +1,4 @@
-package com.transporte.Service;
+package com.transporte.demo.Service;
 
 import com.transporte.demo.Entity.Conductor;
 

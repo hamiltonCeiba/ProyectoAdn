@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.transporte.Service.ConductorService;
 import com.transporte.demo.Entity.Conductor;
+import com.transporte.demo.Service.ConductorService;
 
 @RestController
 @RequestMapping("/api")

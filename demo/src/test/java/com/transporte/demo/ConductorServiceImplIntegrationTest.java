@@ -9,10 +9,10 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.transporte.Service.ConductorService;
-import com.transporte.Service.ServiceImpl.ConductorServiceImpl;
 import com.transporte.demo.Entity.Conductor;
 import com.transporte.demo.Repository.ConductorRepository;
+import com.transporte.demo.Service.ConductorService;
+import com.transporte.demo.Service.ServiceImpl.ConductorServiceImpl;
 
 @RunWith(SpringRunner.class)
 public class ConductorServiceImplIntegrationTest {
