@@ -32,7 +32,7 @@ public class ConductorRestController {
 			produces = APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.OK)
 	public Conductor getEmployeByName(String cedula) {
-		return conductorService.findByName(cedula);
+		return conductorService.findByCedulaCond(cedula);
 	}
 
 }

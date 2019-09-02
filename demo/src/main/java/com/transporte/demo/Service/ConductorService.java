@@ -4,6 +4,6 @@ import com.transporte.demo.Entity.Conductor;
 
 public interface ConductorService {
 	
-	Conductor findByName(String cedula);
+	Conductor findByCedulaCond(String cedula);
 
 }
