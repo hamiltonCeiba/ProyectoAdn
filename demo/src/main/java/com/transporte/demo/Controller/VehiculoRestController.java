@@ -12,28 +12,28 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.transporte.demo.Entity.Conductor;
-import com.transporte.demo.Service.ConductorService;
+import com.transporte.demo.Entity.Vehiculo;
+import com.transporte.demo.Service.VehiculoService;
 
 @RestController
 @RequestMapping("/api")
-public class ConductorRestController {
+public class VehiculoRestController {
 	
 	@Autowired
-	private ConductorService conductorService;
+	private VehiculoService vehiculoService;
 	
 	@CrossOrigin
-	@RequestMapping(value ="/Conductor/{cedula}",method=RequestMethod.GET,produces = APPLICATION_JSON_VALUE)
+	@RequestMapping(value ="/vehiculo/{placa}",method=RequestMethod.GET,produces = APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.OK)
-	public Conductor getConductorPorCedula(String cedula) {
-		return conductorService.findByCedulaCond(cedula);
+	public Vehiculo getVehiculoByPlaca(String placa) {
+		return vehiculoService.findByPlacaVehi(placa);
 	}
-
+	
 	@CrossOrigin
-	@RequestMapping(value ="/Conductores",method=RequestMethod.GET,	produces = APPLICATION_JSON_VALUE)
+	@RequestMapping(value ="/vehiculos",method=RequestMethod.GET,produces = APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.OK)
-	public List<Conductor> getAllConductores() {
-		return conductorService.findAllConductors();
+	public List<Vehiculo> getListVehiculos() {
+		return vehiculoService.findAllVehiculos();
 	}
 
 }

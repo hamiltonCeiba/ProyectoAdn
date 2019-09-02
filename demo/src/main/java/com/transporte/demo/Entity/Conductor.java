@@ -7,8 +7,6 @@ import javax.persistence.Id;
 
 @Entity
 public class Conductor {
-
-	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,6 +27,24 @@ public class Conductor {
 		super();
 		this.cedulaCond = cedulaCond;
 	}
+	
+	
+	
+	public Conductor(int idConductor, String cedulaCond, String primerNombre, String segundoNombre,
+			String primerApellido, String segundoApellido, int celularCond, boolean disponibleCond) {
+		super();
+		this.idConductor = idConductor;
+		this.cedulaCond = cedulaCond;
+		this.primerNombre = primerNombre;
+		this.segundoNombre = segundoNombre;
+		this.primerApellido = primerApellido;
+		this.segundoApellido = segundoApellido;
+		this.celularCond = celularCond;
+		this.disponibleCond = disponibleCond;
+	}
+
+
+
 	public int getIdConductor() {
 		return idConductor;
 	}

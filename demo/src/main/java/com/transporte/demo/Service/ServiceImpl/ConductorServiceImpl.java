@@ -1,5 +1,7 @@
 package com.transporte.demo.Service.ServiceImpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,10 @@ public class ConductorServiceImpl implements ConductorService {
 	@Override
 	public Conductor findByCedulaCond(String cedula) {
 		return conductorRepository.findByCedulaCond(cedula);
+	}
+	@Override
+	public List<Conductor> findAllConductors() {
+		return conductorRepository.findAll();
 	}
 
 }
