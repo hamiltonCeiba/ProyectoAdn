@@ -1,33 +1,31 @@
-package com.transporte.demo;
+package com.transporte.demo.unitaryTest;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
-
-import com.transporte.demo.Entity.Conductor;
-import com.transporte.demo.Repository.ConductorRepository;
+import com.transporte.demo.Entity.Vehiculo;
+import com.transporte.demo.Repository.VehiculoRepository;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class ConductorRepositoryTest {
+public class VehiculoRepositoryTest {
 
 	
 	@Autowired
 	private TestEntityManager entityManager;
 	
 	@Autowired
-	private ConductorRepository conductorReposotoryTest;
+	private VehiculoRepository conductorReposotoryTest;
 
 	@Test
-	public void buscarConductorCedula() {
-		Conductor employ = new Conductor("1234");
+	public void buscarVehiculoPorPlaca() {
+		Vehiculo vehiculo = new Vehiculo();
 		//conductorReposotoryTest.save(employ);
 		
 		//Conductor found = conductorReposotoryTest.findByCedula("1234");
@@ -36,5 +34,4 @@ public class ConductorRepositoryTest {
 		assertTrue(true);
 		
 	}
-	
 }

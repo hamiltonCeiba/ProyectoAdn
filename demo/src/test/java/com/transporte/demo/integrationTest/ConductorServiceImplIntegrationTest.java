@@ -1,4 +1,4 @@
-package com.transporte.demo;
+package com.transporte.demo.integrationTest;
 
 import static org.junit.Assert.assertTrue;
 
